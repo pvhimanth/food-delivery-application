@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1543353071-873f17a7a088') center/cover;
+    padding: 30px;
+}
+
+.wrapper {
+    max-width: 440px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 34px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 35px;
+    color: #333;
+}
+
+.field {
+    position: relative;
+    height: 50px;
+    margin-bottom: 30px;
+}
+
+.field input {
+    height: 100%;
+    width: 100%;
+    padding: 0 15px;
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+.field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #555;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.field input:focus,
+.field input:valid {
+    border-bottom-color: #FF6B6B;
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label {
+    transform: translateY(-30px);
+    font-size: 14px;
+    color: #FF6B6B;
+}
+
+.field input[type="submit"] {
+    background: rgba(255, 107, 107, 0.9);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.field input[type="submit"]:hover {
+    background: rgba(255, 82, 82, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 82, 82, 0.3);
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #333;
+}
+
+.signup-link a {
+    color: #FF6B6B;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+    color: #FF5252;
+}
+
+.field input:-webkit-autofill,
+.field input:-webkit-autofill:hover,
+.field input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #333;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.field input:focus::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
